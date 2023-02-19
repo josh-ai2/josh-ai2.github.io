@@ -1,2 +1,2 @@
-# josh-ai2.github.io
-This is my personal website!!!
+# This is my Personal Website
+You can access it through this [link!](josh-ai2.github.io)
