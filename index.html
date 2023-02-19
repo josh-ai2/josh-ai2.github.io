@@ -10,19 +10,20 @@
     <!-- CORE CSS BOOTSTRAP 2018 CDN-->
     <link
       rel="stylesheet"
-      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css"
       integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
       crossorigin="anonymous"
     />
 
     <!-- Latest compiled and minified JavaScript -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/js/bootstrap.min.js" 
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.min.js" 
     integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" 
     crossorigin="anonymous">
     </script>
 
-    <!-- Core CSS Theme (Includes Bootstrap)-->
+    <!-- Core CSS Theme (Includes Bootstrap and CSS icons)-->
     <link rel="stylesheet" href="css/styles.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
 
     <!-- extra read resources -->
     <script src="https://use.fontawesome.com/ad915976bb.js"></script>
@@ -31,11 +32,31 @@
     <style type="text/css">
         #header
         {
-            background-image: url('assets/macbookwallpaper.jpeg');
-            background-size: cover;
-            background-blend-mode: luminosity;
+            background-image: url('assets/btc-city.gif');
+            background-size:cover;
+            background-blend-mode: screen;
         }  
     </style>
+
+    <!-- Change My Projects Section Size-->
+    <style>
+        #MyProjects {
+            height: 1500px;
+            background-size: cover;
+            background-image: url(assets/214441.gif);
+            background-blend-mode: multiply;
+        }
+    </style>
+
+    <style> 
+    body {
+        background-image: url(assets/214441.gif);
+        background-color: black;
+        background-position: center;
+        background-size: cover;
+    }
+    </style>
+
 </head>
 
 <!-- DESIGN START-->
@@ -85,35 +106,44 @@
 
     <!-- CLASS CREATION FOR EASY CLASS LINKS-->
 
+        <!-- we set padding for text-->
+    <style>
+        .padding-class {
+            background-color: blue;
+            padding: 10px;
+            border-radius: 40px;
+        }
+    </style>
+
     <!-- Created Rainbow Class -- we use specifically for larger font sizes-->
     <style>
         .rainbow {
-        background-image: linear-gradient(to left,  orange, red, yellow);
+        background-image: linear-gradient(to left,  red, orange, yellow, orange, red);
         background-size: 50% 100%;
         background-clip: text;
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
-        animation: rainbow-background 5s linear infinite;
+        animation: rainbow-background 5s linear 0s infinite;
         }
 
         @keyframes rainbow-background {
         0% {
-            background-position: 0% 50%;
+            background-position: 0% 25%;
         }
         100% {
             background-position: 100% 50%;
         }
-        }   
-    </style>
-    <!-- Created background padding-->
-    <style>
-        .background-class {
-            background-color: rgb(241, 241, 241);
-            padding: 12px;
-            border-radius: 30px;
         }
-    </style>
     
+    </style>
+
+    <!-- Created Underline class-->
+    <style>
+    .underline {
+        text-decoration: underline;
+    }
+    </style>
+
     <!-- Created Pulsate Class-->
     <style>
         .pulsate {
@@ -124,7 +154,7 @@
         }
         @keyframes pulsate {
         0% { 
-            background-color: greenyellow;
+            background-color: yellow;
         }
         25% { 
             background-color: orange;
@@ -136,10 +166,38 @@
             background-color: orange;
         }
         100% { 
-            background-color: greenyellow;
+            background-color: red;
         }
     }    
     </style>
+
+      <!-- Created Pulsate Class-->
+      <style>
+        .pulsate {
+        -webkit-animation: pulsate 3s ease-out;
+        -webkit-animation-iteration-count: infinite; 
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        }
+        @keyframes pulsate {
+        0% { 
+            background-color: cyan;
+        }
+        25% { 
+            background-color: skyblue;
+        }
+        50% { 
+            background-color: cyan;
+        }
+        75% { 
+            background-color: skyblue;
+        }
+        100% { 
+            background-color: cyan;
+        }
+    }    
+    </style>
+
     <!-- Created Highlighted Class-->
     <style>
         .highlighted {
@@ -154,58 +212,76 @@
         }
     </style>
 
+    <!--Created Break Size-->
+    <style>
+        .br {
+        height: 20px; /* change this value to the desired size */
+        }
+    </style>
+
+
     <!-- Header -->
-    <header id="header" class="jumbotron jumbotron-fluid text-center">
+    <header id="header" class="jumbotron jumbotron-fluid text-center" style = "height: 550px">
       <div class="container">
-        <h1 class="display-1 fw-bold rainbow" id="joshmain">Josh Manto</h1> <!-- it is linked to rainbow class above-->
-        <p class="m-lg-1 background-class bold" style="color:black">I am a Data Scientist and Blockchain Developer at Duke University.</p>
-        <p class="m-lg-1 background-class bold" style="color:black">I like working with blockchain and building Web-3 Applications</span></p>
-        <p class="m-lg-1 background-class bold" style="color:black">I am currently working on my latest project <a href ="https://medium.com/sciecon-research/a-blockchain-based-decentralized-cloud-storage-with-keeper-and-distributor-systems-6d0b27632ec2" class="bold">DecentraStor</span>!</p>
+        <h1 class="display-1 fw-bold rainbow" id="joshmain"><br>Josh Manto</h1> <!-- it is linked to rainbow class above-->
+        <h2 class="m-lg-1 bold" style="color:white">I am a Data Scientist and Blockchain Developer at Duke University.</h2>
+        <h2 class="m-lg-1 bold" style="color:white">I work with Blockchain and build Web-3 Applications</span></h2>
+        <h2 class="m-lg-1 bold" style="color:white">I am currently working on my latest project <a href ="https://medium.com/sciecon-research/a-blockchain-based-decentralized-cloud-storage-with-keeper-and-distributor-systems-6d0b27632ec2" class="bold pulsate ">DecentraStor</span>!</h2>
             <div class="d-flex justify-content-center">
-                <a href="https://github.com/josh-ai2" class="btn btn-primary bold m-4 ">My GitHub</a>
-                <a href="https://www.linkedin.com/in/josh-manto" class="btn btn-primary bold m-4"><i class="bi bi-github"></i>My LinkedIn</a>
+                <a href="https://github.com/josh-ai2" class="btn btn-primary bold m-4"><i class="bi bi-github"></i> My GitHub</a>
+                <a href="https://www.linkedin.com/in/josh-manto" class="btn btn-primary bold m-4"><i class="bi bi-linkedin"></i> My LinkedIn</a>
             </div>
       </div>
     </header>
 
     <!-- My Projects Section-->
-    <section id="Projects" class=" bg-darkpt-4">
-        <div class="container px-lg-5">
-            <div class="m-4 m-lg-5">
-                <h1 class="display-5"> My Projects</h1>
+    <section id="MyProjects" class=" jumbotron jumbotron-fluid text-center text-white" style = "height: 1200px;">
+        <div class="container">
+            <div>
+                <h1 class="display-1 fw-bold rainbow"><br> My Projects<br></h1>
             </div>
+
             <!-- Project Cards -->
+
+            <!-- CARD ONE-->
             <div class="row gx-lg-5">
                 <div class="col-lg-4 mb-5">
                     <div class="card bg-light border-0 h-100">
                         <img src="assets/project1.jpeg" class="card-img-top" alt="Project Image">
                         <div class="card-body text-center p-4 p-lg-5 pt-0 pt-lg-0">
-                            <h2>Project 1</h2>
+                            <h2>CARD1</h2>
                             <p class="mb-0">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam viverra euismod odio, gravida pellentesque urna varius vitae.</p>
                             <a href="#" class="btn btn-primary btn-sm">Learn More</a>
                         </div>
                     </div>
                 </div>
+
+                <!-- CARD TWO -->
                 <div class="col-lg-4 mb-5">
                     <div class="card bg-light border-0 h-100">
                         <img src="assets/project2.jpeg" class="card-img-top" alt="Project Image">
                         <div class="card-body text-center p-4 p-lg-5 pt-0 pt-lg-0">
-                            <h2 class="fs-4 fw-bold">Project 2</h2>
+                            <h2>CARD2</h2>
                             <p class="mb-0">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam viverra euismod odio, gravida pellentesque urna varius vitae.</p>
                             <a href="#" class="btn btn-primary btn-sm">Learn More</a>
                         </div>
                     </div>
                 </div>
+
+                <!-- CARD THREE -->
                 <div class="col-lg-4 mb-5">
                     <div class="card bg-light border-0 h-100">
                         <img src="assets/project3.jpeg" class="card-img-top" alt="Project Image">
                         <div class="card-body text-center p-4 p-lg-5 pt-0 pt-lg-0">
-                            <h2 class="fs-4 fw-bold">Project 3</h2>
-                            <p class="mb-0">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam viverra euismod odio, gravida pellentesque urna varius vitae.</p>
+                            <h2> CARD3</h2>
+                            <p class="mb-0"> ipsum dolor sit amet, consectetur adipiscing elit. Nam viverra euismod odio, gravida pellentesque urna varius vitae.</p>
                             <a href="#" class="btn btn-primary btn-sm">Learn More</a>
                         </div>
                     </div>
                 </div>
+
+
+
             </div>
         </div>
     </section>
@@ -219,10 +295,12 @@
             <p class="m-0 text-center text-white">Josh Manto, 2023</p>
         </div>
     </footer>
+
     <!-- JQUERY-->
     <script 
     src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js">
     </script>
+
     <!-- Core theme JS-->
     <script src="js/bootstrap.min.js"></script>
 </body>
