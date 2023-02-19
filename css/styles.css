@@ -10,6 +10,72 @@
  * Copyright 2011-2021 Twitter, Inc.
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
  */
+
+ @import url('https://fonts.googleapis.com/css?family=Rubik:300,400,500%display=swap');
+ *
+ {
+     margin: 0;
+     padding: 0;
+     box-sizing: border-box;
+     font-family: 'Rubik', sans-serif;
+ }
+
+.new-container
+{
+  position: relative;
+  max-width: 90%;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax (300рх, 1fr));
+  grid-template-rows: minmax(90x, auto);
+  margin: 45px;
+  grid-auto-flow:dense;
+  grid-gap: 3px;
+}
+
+.new-container .new-box
+{
+  background: #5c1111d0;
+  padding: 90px;
+  display: grid;
+  place-items: center;
+  text-align: center
+  color: red;
+  transition: 1s;
+}
+
+.new-container .new-box:hover 
+{
+  background: #117796;
+}
+
+.new-container .new-box img
+{
+  position: relative;
+  max-width: 100px;
+  margin-bottom: 10px;
+}
+
+@media (max-width: 991px)
+{
+  .new-container
+  {
+    grid-template-columns: repeat(auto-fill, minmax(50%,1fr));
+    grid-template-rows: minmax(auto, auto);
+  }
+  .new-container .new-box
+  {
+    grid-column: unset;
+    grid-row: unset;
+  }
+}
+ 
+.footer-container{
+  padding: 55px; 
+  background-color: #121010;
+}
+
+
+
 :root {
   --bs-blue: #0d6efd;
   --bs-indigo: #6610f2;
