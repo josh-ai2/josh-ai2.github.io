@@ -1,301 +1,75 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" /> 
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-    <meta name="description" content="" />
-    <meta name="author" content="" />
-    <title>Josh Manto's Personal Website</title>
+<!-- Research & Publications Section -->
+<section id="Research" class="py-5 bg-light">
+  <div class="container">
+    <h1 class="text-center bold mb-4">Research & Publications</h1>
 
-    <!-- CORE CSS BOOTSTRAP 2018 CDN-->
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css"
-      integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
-      crossorigin="anonymous"
-    />
-
-    <!-- Latest compiled and minified JavaScript -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.min.js" 
-    integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" 
-    crossorigin="anonymous">
-    </script>
-
-    <!-- Core CSS Theme (Includes Bootstrap and CSS icons)-->
-    <link rel="stylesheet" href="css/styles.css" />
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
-
-    <!-- extra read resources -->
-    <script src="https://use.fontawesome.com/ad915976bb.js"></script>
-
-    <!-- We set background for the header-->
-    <style type="text/css">
-        #header
-        {
-            background-image: url('assets/btc-city.gif');
-            background-size:cover;
-            background-blend-mode: screen;
-        }  
-    </style>
-
-    <!-- Change My Projects Section Size-->
-    <style>
-        #MyProjects {
-            height: 1500px;
-            background-size: cover;
-            background-image: url(assets/bladerunner.gif);
-        }
-    </style>
-
-    <style> 
-    body {
-        background-image: url(assets/);
-        background-color: black;
-        background-position: center;
-        background-size: cover;
-    }
-    </style>
-
-</head>
-
-<!-- DESIGN START-->
-<body>
-    <!-- THIS IS THE NAVIGATION BAR AT THE TOP-->
-    <nav id = "navbar" class="navbar navbar-expand-lg navbar-dark bg-dark">
-      <div class="container">
-        <!-- MAIN TOP LEFT JOSH MANTO ICON -->
-        <a id = "JM-nav-item" class="navbar-brand" href="#JM">Josh Manto</a>
-        <button
-          class="navbar-toggler"
-          type="button"
-          data-toggle="collapse"
-          data-target="#navbarNav"
-          aria-controls="navbarNav"
-          aria-expanded="false"
-          aria-label="Toggle navigation"
-        >
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarNav">
-          <ul class="navbar-nav">
-            <!-- THESE ARE THE NAVIGATION ICONS -->
-            <li id = "Home-nav-item" class="nav-item">
-              <a class="nav-link" href="#Home">Home</a>
-            </li>
-            <li id = "Contact-nav-item" class="nav-item"> <!-- we set id names:  --> 
-              <a class="nav-link" href="#Contact">Contact</a>
-            </li>
-            <li id = "Projects-nav-item" class="nav-item">
-              <a class="nav-link" href="#Projects">Projects</a>
-            </li>
-            <li id = "Blog-nav-item" class="nav-item">
-              <a class="nav-link" href="#Blog">Blog</a>
-            </li>
-          </ul>
-        </div>
+    <!-- Changqing Larch Plantation Project -->
+    <div class="card shadow mb-4">
+      <div class="card-body">
+        <h2 class="card-title bold">Dual LSTM Pipelines for Multi-Temporal Larch Plantation Mapping</h2>
+        <h5 class="text-muted">Fall 2024, Duke Kunshan University</h5>
+        <p>
+          Developed supervised and self-supervised LSTM models to classify tree species (Japanese and Chinese larch) from satellite imagery in mountainous terrains.
+          <br><strong>Keywords:</strong> Remote Sensing, LSTM, Google Earth Engine, Biodiversity Conservation
+        </p>
+        <ul>
+          <li><strong>Accuracy:</strong> 94.45% supervised, ~66% unsupervised purity</li>
+          <li><strong>Manuscript:</strong> <a href="assets/Josh_Manto_Changqing_LSTM_Plantation_Mapping_Manuscript.pdf" target="_blank">Download PDF</a></li>
+          <li><strong>Poster:</strong> <a href="assets/josh_manto_changqing_poster.pdf" target="_blank">Changqing Region Plantation Mapping Poster</a></li>
+          <li><strong>Status:</strong> Submitted to Remote Sensing of Environment / Forest Ecology and Management journals</li>
+        </ul>
       </div>
-    </nav>
+    </div>
 
-    <!-- WE SET COLOR OF EACH NAVIGATION BUTTON-->
-    <style>
-        #Blog-nav-item a, #Projects-nav-item a, #Contact-nav-item a, #Home-nav-item a {
-        color: white;
-        }
-    </style>
-
-    <!-- CLASS CREATION FOR EASY CLASS LINKS-->
-
-        <!-- we set padding for text-->
-    <style>
-        .padding-class {
-            background-color: blue;
-            padding: 10px;
-            border-radius: 40px;
-        }
-    </style>
-
-    <!-- Created Rainbow Class -- we use specifically for larger font sizes-->
-    <style>
-        .rainbow {
-        background-image: linear-gradient(to left,  red, orange, yellow, orange, red);
-        background-size: 50% 100%;
-        background-clip: text;
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-        animation: rainbow-background 5s linear 0s infinite;
-        }
-
-        @keyframes rainbow-background {
-        0% {
-            background-position: 0% 25%;
-        }
-        100% {
-            background-position: 100% 50%;
-        }
-        }
-    
-    </style>
-
-    <!-- Created Underline class-->
-    <style>
-    .underline {
-        text-decoration: underline;
-    }
-    </style>
-
-    <!-- Created Pulsate Class-->
-    <style>
-        .pulsate {
-        -webkit-animation: pulsate 3s ease-out;
-        -webkit-animation-iteration-count: infinite; 
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-        }
-        @keyframes pulsate {
-        0% { 
-            background-color: yellow;
-        }
-        25% { 
-            background-color: orange;
-        }
-        50% { 
-            background-color: yellow;
-        }
-        75% { 
-            background-color: orange;
-        }
-        100% { 
-            background-color: red;
-        }
-    }    
-    </style>
-
-      <!-- Created Pulsate Class-->
-      <style>
-        .pulsate {
-        -webkit-animation: pulsate 3s ease-out;
-        -webkit-animation-iteration-count: infinite; 
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-        }
-        @keyframes pulsate {
-        0% { 
-            background-color: cyan;
-        }
-        25% { 
-            background-color: skyblue;
-        }
-        50% { 
-            background-color: cyan;
-        }
-        75% { 
-            background-color: skyblue;
-        }
-        100% { 
-            background-color: cyan;
-        }
-    }    
-    </style>
-
-    <!-- Created Highlighted Class-->
-    <style>
-        .highlighted {
-          background-color: yellow;
-        }
-     </style>
-
-    <!-- Created Bold Class-->
-    <style>
-        .bold {
-            font-weight: bold;
-        }
-    </style>
-
-    <!--Created Break Size-->
-    <style>
-        .br {
-        height: 20px; /* change this value to the desired size */
-        }
-    </style>
-
-
-    <!-- Header -->
-    <header id="header" class="jumbotron jumbotron-fluid text-center" style = "height: 700px">
-      <div class="container">
-        <h1 class="display-1 fw-bold rainbow" id="joshmain"><br><br>Josh Manto</h1> <!-- it is linked to rainbow class above-->
-        <h2 class="m-lg-1 bold" style="color:white">I am a Data Scientist and Blockchain Developer @ Duke University</h2>
-        <h2 class="m-lg-1 bold" style="color:white">I work with Blockchain a lot and love building Web-3 Applications!</span></h2>
-        <h2 class="m-lg-1 bold" style="color:white">I am currently working on my latest project <a href ="https://medium.com/sciecon-research/a-blockchain-based-decentralized-cloud-storage-with-keeper-and-distributor-systems-6d0b27632ec2" class="bold pulsate ">DecentraStor</span>!</h2>
-            <div class="d-flex justify-content-center">
-                <a href="https://github.com/josh-ai2" class="btn btn-primary bold m-4"><i class="bi bi-github"></i> My GitHub</a>
-                <a href="https://www.linkedin.com/in/josh-manto" class="btn btn-primary bold m-4"><i class="bi bi-linkedin"></i> My LinkedIn</a>
-            </div>
+    <!-- Sustainable Development Goal 6 Tracking Project -->
+    <div class="card shadow mb-4">
+      <div class="card-body">
+        <h2 class="card-title bold">Tracking Progress Towards Sustainable Development Goal 6 Using Satellite Imagery</h2>
+        <p>
+          Used self-supervised vision model DINOv2 with Landsat-8 and Sentinel-2 data to classify infrastructure related to water access in Africa.
+        </p>
+        <ul>
+          <li><strong>Accuracy:</strong> 96% (Piped Water), 97% (Sewage System)</li>
+          <li><strong>Manuscript #1:</strong> <a href="assets/es-2025-00014j.pdf" target="_blank">Environmental Science and Technology Submission</a></li>
+          <li><strong>Manuscript #2:</strong> Under preparation (Infrastructure Mapping)</li>
+        </ul>
       </div>
-    </header>
+    </div>
 
-    <!-- My Projects Section-->
-    <section id="MyProjects" class=" jumbotron jumbotron-fluid text-center text-white" style = "height: 2310px;">
-        <div class="container">
-            <div>
-                <h1 class="display-1 fw-bold"><br> My Projects<br></h1>
-                <p>(Project links and websites to be updated soon)</p>
-            </div>
+    <!-- NSF Saltwater Intrusion Project -->
+    <div class="card shadow mb-4">
+      <div class="card-body">
+        <h2 class="card-title bold">Saltwater Intrusion & Sea Level Rise Database</h2>
+        <p>
+          Built NLP and GIS pipelines using ArcGIS and Python to map saltwater intrusion along the North American Coastal Plain.
+        </p>
+        <ul>
+          <li><strong>NSF Award #:</strong> 2108286</li>
+          <li><strong>Pipeline:</strong> NLP (spaCy, NLTK), ArcGIS, COVIDENCE API integration</li>
+          <li><strong>Database Link:</strong> <a href="assets/saltwater_intrusion_map.pdf" target="_blank">GIS Database and Maps</a></li>
+        </ul>
+      </div>
+    </div>
 
-            <!-- We Design Masonry Layout Using CSS Grids -->
-            <!-- ID: container.grid.class-->
-            <!-- ID: body.grid.class-->
+  </section>
 
-            <!-- CONTAINER GRID BOX 1-->
-            <div class="new-container">
-                <div class = "new-box">
-                    <div class: s="content">
-                        <!-- insert image here-->
-                        <h2>DecentraStor: Blockchain-Powered Cloud Storage <br> with Keeper-and-Distributor Systems</h2>
-                        <p> As the Founder of DecentraStor, I'm excited to offer a blockchain-powered solution to help companies address their data storage issues. Today, businesses face a growing number of data risks and security threats, which is why I drew inspiration from FileCoin and Storj to develop a more secure and efficient solution for data storage and retrieval. DecentraStor utilizes private blockchains to offer enhanced cybersecurity through data "keepers and distributors", providing companies with a more optimized and secure way to access their data. </p>
-                    </div>
-                </div>
+---
 
-                <div class = "new-box">
-                    <div class: s="content">
-                        <h2>Bass Connections @ Duke: <br> Gamifying Risk Identification for Alcohol Use Behaviors Across Countries and Cultures </h2>
-                        <p>I am currently contributing as an app development team member to the creation of the Alcohol Use Behavioral Phenotyping Test (AUBPT), a gamified tool that assesses biopsychosocial constructs related to alcohol use. Our team expanded AUBPT's implementation globally, adapting it for Portuguese and Hindi use in Brazil and India. Using the National Institute of Mental Health's Research Domain Criteria framework, we tested AUBPT's ability to predict alcohol use disorders and created simulated AI agents to model patient performance. </p>
-                        <p> My current work involves converting Unity-developed games into a WebApp version using WebGL</p>
-                    </div>
-                </div>    
+### Instructions for integrating this snippet into your existing HTML:
 
-                <div class = "new-box">
-                    <div class: s="content">
-                        <h2>Cloud-based Framework for Real-time BCI <br> and IoT Analytics with TinyML Integration</h2>
-                        <p>I am contributing to the development of a cloud framework for real-time brain-computer interface (BCI) and Internet of Things (IoT) analytics using TinyML under the guidance of Prof. Ming-Chun Huang. Our project's goal is to integrate openBCI hardware with IoT devices and send electroencephalography (EEG) data to a STREAM websocket API and digital twin platform for real-time machine learning analysis.
-                            As part of the project, I collaborated with the University of Buffalo openBCI team and a student development team to explore the potential for real-time BCIs and to create a pipeline for machine learning analysis. We utilize the following stack and framework: STREAM Websocket, Digital twin platform, OpenBCI, TinyML, Postman (API), and AWS.
-                            Through this project, I hope to gain a valuable experience in developing cloud-based solutions for real-time BCI and IoT analytics, collaborating with cross-functional teams, and working with cutting-edge technologies in the field of machine learning.</p>
-                    </div>
-                </div>   
+1. **Upload Files**:  
+   - Place your manuscript PDF file (e.g., `changqing_larch_paper.pdf`) and poster PDF file (e.g., `larch_mapping_poster.pdf`) into your website repository’s `assets/` folder.
 
-                <div class = "new-box">
-                    <div class: s="content">
-                        <h2>HeritageXR</h2>
-                        <p>As a startup co-founder under the guidance of Professor Liqi Ren, I helped to create HeritageXR, which is a startup that aims to implement educational mobile apps with virtual reality (VR) and augmented reality (AR) capabilities. Our goal is to create an immersive and educational experiences for users to explore Vietnamese architectural structures and document the "way of life" of locals through 3D visualizations. 
-                            I work with Blendr, UnityVR, and Adobe AERO for 3d visualization, and Flutter and AWS for the app dev. We are going to conduct on-site research and interviews with locals in central and southern Vietnam (Saigon) to gain a better understanding of Vietnamese culture, history, and architecture. The project is ongoing, and started in Spring 2023. I am hoping to gain valuable experience in startup co-founding, developing mobile apps with VR and AR integration, and conducting field research to create meaningful educational experiences</p>
-                    </div>
-                </div>  
+2. **Update File Links**:
+   - Update the provided links (`href="assets/yourfile.pdf"`) to exactly match the filenames you upload into your assets folder.
 
-    <!-- Footer-->
-    <footer>
-        <div class="footer-container">
-            <br>
-            <p class="m-1 text-center text-white"><a class="btn btn-outline-light btn-social mx-1" href="https://github.com/josh-ai2/">Github  <i class="bi bi-github"></i></a>
-            <a class="btn btn-outline-light btn-social mx-1" href="https://www.linkedin.com/in/josh-manto/">LinkedIn  <i class="bi bi-linkedin"></i></i></a></p>
-            <p class="m-0 text-center text-white">Josh Manto, 2023</p>
-        </div>
-    </footer>
+3. **Add Custom CSS (Optional)**:
+   - If you want further customizations, add additional CSS styles in your `styles.css` file, such as for the cards, shadows, or text styling.
 
-    <!-- JQUERY-->
-    <script 
-    src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js">
-    </script>
-
-    <!-- Core theme JS-->
-    <script src="js/bootstrap.min.js"></script>
-</body>
-</html>
+4. **Navigation Bar Update (Optional but Recommended)**:
+   - Include a navigation link in your navigation bar for easy access:
+     ```html
+     <li class="nav-item">
+         <a class="nav-link" href="#Research">Research</a>
+     </li>
+   - Make sure the section ID (`id="Research"`) matches the new section you add above.
