@@ -4,25 +4,24 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Josh Manto – Personal Website</title>
-  <!-- Optional: Link to your external CSS styles if desired -->
   <link rel="stylesheet" href="css/styles.css" />
   <link rel="stylesheet" href="css/main.css" />
 
   <style>
-    /* Basic reset and mobile-friendly defaults */
     * {
       box-sizing: border-box;
       margin: 0;
       padding: 0;
     }
-    body {
-      background-color: #cccccc; /* or any shade of grey you prefer */
-      color: #000000;
-      margin: 0;
-      font-family: sans-serif;
-      line-height: 1.4;
-      background-image: none; /* remove any placeholder image */
-    }
+  body {
+    background-color: #ffffff; /* pure white background */
+    color: #000000;
+    margin: 0;
+    font-family: sans-serif;
+    line-height: 1.4;
+    background-image: none;
+  }
+
     img {
       max-width: 100%;
       height: auto;
@@ -53,7 +52,6 @@
       padding: 0 1rem;
     }
 
-    /* About section */
     #about {
       margin-bottom: 2rem;
     }
@@ -61,7 +59,6 @@
       margin-bottom: 0.5rem;
     }
 
-    /* Projects Grid Layout */
     .projects-grid {
       display: flex;
       flex-wrap: wrap;
@@ -69,12 +66,15 @@
     }
     .project-card {
       flex: 1 1 calc(33% - 1rem);
-      background: #f9f9f9;
+      background-color: #ffffff;
       border: 1px solid #ddd;
-      border-radius: 5px;
-      padding: 1rem;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+      padding: 1.5rem;
+      margin: 1rem 0;
       min-width: 280px;
     }
+
     .project-card h3 {
       margin-top: 0;
       margin-bottom: 0.5rem;
@@ -83,17 +83,15 @@
       margin-bottom: 0.6rem;
     }
 
-    /* Force each project image to be a square, object-fit: cover */
     .project-image {
       width: 100%;
-      max-width: 400px; /* Adjust as desired for your layout */
-      height: 400px;    /* Same as max-width to force square aspect ratio */
+      max-width: 400px;
+      height: 400px;
       object-fit: cover;
       display: block;
       margin-bottom: 0.8rem;
     }
 
-    /* Smaller devices: stack columns */
     @media (max-width: 900px) {
       .project-card {
         flex: 1 1 calc(50% - 1rem);
@@ -105,11 +103,10 @@
       }
       .project-image {
         max-width: 100%;
-        height: auto; /* optional if you'd like a responsive square for smaller screens */
+        height: auto;
       }
     }
 
-    /* Footer */
     footer {
       padding: 1rem;
       text-align: center;
@@ -117,192 +114,179 @@
       font-size: 0.9rem;
       margin-top: 2rem;
     }
+
+    .link-list {
+      list-style: none;
+      padding-left: 0;
+    }
+    .link-list li {
+      margin-bottom: 0.4rem;
+    }
+    .link-list a {
+      text-decoration: none;
+      color: #007acc;
+      cursor: pointer;
+    }
+    .link-list a:hover {
+      text-decoration: underline;
+    }
   </style>
 </head>
 <body>
 
-  <!-- HEADER WITH PROFILE PHOTO -->
-  <header>
-    <img src="assets/josh.jpg" alt="Profile Photo of Josh">
-    <div>
-      <h1>Welcome to My Personal Website</h1>
-      <p>
-        Hi, I'm <strong>Josh&nbsp;Manto</strong>, a Duke/Duke Kunshan University dual-degree student
-        specializing in machine learning, remote sensing, and geospatial data.
-      </p>
-    </div>
-  </header>
+<!--&lt;!&ndash; HEADER WITH PROFILE PHOTO &ndash;&gt;-->
+<!--  <header>-->
+<!--    <img src="assets/josh.jpg" alt="Profile Photo of Josh">-->
+<!--    <div>-->
+<!--      <h1>About Josh Manto</h1>-->
+<!--          <p style="font-size: 1.1rem;">-->
+<!--          Hi, I'm <strong>Josh&nbsp;Manto</strong>, a recent graduate of the Duke University and Duke Kunshan University dual-degree program-->
+<!--          specializing in machine learning, remote sensing, and geospatial data science. I'm currently seeking-->
+<!--          opportunities in GIS and geospatial analysis, where I can apply my skills in satellite imagery processing,-->
+<!--          deep learning, and environmental modeling. I have two forthcoming publications: one in-->
+<!--          <a href="https://www.sciencedirect.com/journal/water-research" target="_blank" rel="noopener noreferrer">Water Research</a>-->
+<!--          on water infrastructure mapping, and another in-->
+<!--          <a href="https://www.sciencedirect.com/journal/remote-sensing-of-environment" target="_blank" rel="noopener noreferrer">Remote Sensing of Environment</a>-->
+<!--          focusing on time-series classification of forest ecosystems. Feel free to reach out at-->
+<!--          <a href="mailto:jmm267@duke.edu">jmm267@duke.edu</a>-->
+<!--          or connect on-->
+<!--          <a href="https://www.linkedin.com/in/josh-manto/" target="_blank" rel="noopener noreferrer">LinkedIn</a>.-->
+<!--        </p>-->
+<!--    </div>-->
+<!--  </header>-->
+
+<!-- HEADER WITH PROFILE PHOTO -->
+<header style="display: flex; align-items: flex-start; gap: 1.5rem; padding: 1rem;">
+  <img src="assets/josh.jpg" alt="Profile Photo of Josh" style="width: 160px; height: auto; border-radius: 8px;">
+  <div>
+    <h1>About Josh Manto</h1>
+    <p style="font-size: 1.1rem;">
+          Hi, I'm <strong>Josh&nbsp;Manto</strong>, a recent graduate of the Duke University and Duke Kunshan University dual-degree program
+          specializing in machine learning, remote sensing, and geospatial data science. I'm currently seeking
+          opportunities in GIS and geospatial analysis, where I can apply my skills in satellite imagery processing,
+          deep learning, and environmental modeling. I have two forthcoming publications: one in
+          <a href="https://www.sciencedirect.com/journal/water-research" target="_blank" rel="noopener noreferrer">Water Research</a>
+          on water infrastructure mapping, and another in
+          <a href="https://www.sciencedirect.com/journal/remote-sensing-of-environment" target="_blank" rel="noopener noreferrer">Remote Sensing of Environment</a>
+          focusing on time-series classification of forest ecosystems. Feel free to reach out at
+          <a href="mailto:jmm267@duke.edu">jmm267@duke.edu</a>
+          or connect on
+          <a href="https://www.linkedin.com/in/josh-manto/" target="_blank" rel="noopener noreferrer">LinkedIn</a>.
+        </p>
+
+    <p style="font-size: 1.1rem;">
+      📍 Manila, Philippines <br>
+      📧 <a href="mailto:jmm267@duke.edu">jmm267@duke.edu</a> <br>
+      💼 <a href="https://www.linkedin.com/in/josh-manto/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+    </p>
+  </div>
+</header>
+
 
   <main>
-    <!-- ABOUT ME SECTION -->
-    <section id="about">
-      <h2>About Me</h2>
-      <p>
-        I am currently pursuing a dual B.Sc. degree in Data Science at Duke University &amp; Duke Kunshan University,
-        with a strong focus on machine learning, computer vision, and remote sensing for climate and geospatial applications.
-        I come from Manila in the Philippines, and I’m deeply committed to applying advanced data science techniques
-        to pressing environmental challenges.
-      </p>
-      <p>
-        Feel free to reach out at
-        <a href="mailto:jmm267@duke.edu">jmm267@duke.edu</a>
-        or connect on
-        <a href="https://www.linkedin.com/in/josh-manto/" target="_blank" rel="noopener noreferrer">LinkedIn</a>.
-      </p>
-    </section>
-
-    <!-- MAIN PROJECTS SECTION -->
     <section id="main-projects" style="margin-bottom: 2rem;">
       <h2 style="margin-bottom: 1rem;">My Main Projects</h2>
       <div class="projects-grid">
 
-        <!-- Project 1: Dual LSTM Pipelines -->
+        <!-- Project 1 -->
         <article class="project-card">
-          <img
-            class="project-image"
-            src="assets/lstm.png"
-            alt="Dual LSTM Pipelines Visualization"
-          />
+          <img class="project-image" src="assets/lstm.png" alt="Dual LSTM Pipelines Visualization" />
           <h3>Dual LSTM Pipelines for Multi-Temporal Larch Plantation Mapping</h3>
           <p>
-            Developed both supervised and self-supervised LSTM approaches to classify larch plantations
-            and other forest types in the mountainous Changqing region. This dual pipeline leverages 12 months
-            of Sentinel-2 imagery, encompassing spectral bands and key vegetation indices (NDVI, EVI, NDWI).
-            A supervised branch (bidirectional LSTM) achieved ~94.45% classification accuracy in well-sampled areas,
-            distinguishing <em>Larix kaempferi</em> (Japanese larch) and <em>Larix gmelinii var. principis-rupprechtii</em> (Chinese larch)
-            based on their distinct phenological cues. The parallel self-supervised autoencoder pipeline
-            discovered additional subtle clusters—highlighting important landscape heterogeneity
-            that extends beyond direct groundtruth data.
+            Developed both supervised and self-supervised LSTM approaches to classify larch plantations and other forest types in the mountainous Changqing region. This dual pipeline leverages 12 months of Sentinel-2 imagery, encompassing spectral bands and key vegetation indices (NDVI, EVI, NDWI). A supervised branch (bidirectional LSTM) achieved ~94.45% classification accuracy in well-sampled areas, distinguishing <em>Larix kaempferi</em> (Japanese larch) and <em>Larix gmelinii var. principis-rupprechtii</em> (Chinese larch) based on their distinct phenological cues. The parallel self-supervised autoencoder pipeline discovered additional subtle clusters—highlighting important landscape heterogeneity that extends beyond direct groundtruth data.
           </p>
           <p>
-            This project demonstrates how time-series deep learning methods can overcome challenging
-            data-scarce mountainous terrain, providing actionable insights for biodiversity conservation
-            and sustainable forestry management.
+            This project demonstrates how time-series deep learning methods can overcome challenging data-scarce mountainous terrain, providing actionable insights for biodiversity conservation and sustainable forestry management.
           </p>
-          <p>
-            More details can be found in
-            <a href="assets/sw-paper.pdf" target="_blank" rel="noopener noreferrer">the manuscript</a>
-            and
-            <a href="assets/sw-poster.png" target="_blank" rel="noopener noreferrer">the poster</a>.
-          </p>
+          <ul class="link-list">
+            <li><a href="assets/sw-paper.pdf" target="_blank" rel="noopener noreferrer">Manuscript</a></li>
+            <li><a href="assets/sw-poster.png" target="_blank" rel="noopener noreferrer">Poster</a></li>
+          </ul>
         </article>
 
-        <!-- Project 2: Tracking Progress Towards SDG 6 -->
+        <!-- Project 2 -->
         <article class="project-card">
-          <img
-            class="project-image"
-            src="assets/piped-water.png"
-            alt="SDG 6 - Piped Water Access Map"
-          />
+          <img class="project-image" src="assets/piped-water.png" alt="SDG 6 - Piped Water Access Map" />
           <h3>Tracking Progress Towards Sustainable Development Goal 6 Using Satellite Imagery</h3>
           <p>
-            In this work, we assessed water access and sanitation infrastructure (i.e., piped water systems
-            and sewage networks) across African regions by combining Afrobarometer survey data with
-            large-scale satellite imagery (Landsat&nbsp;8 and Sentinel-2). Through a self-supervised vision
-            transformer approach (DINO), the model inferred the presence of critical water infrastructure
-            based on subtle spectral and spatial cues in cloud-free monthly composites. By integrating
-            ~46,000+ interview responses from Round&nbsp;7 and Round&nbsp;8 of Afrobarometer, the pipeline
-            achieved high classification accuracies (over 96% for piped water access, 97% for sewage system access).
+            In this work, we assessed water access and sanitation infrastructure (i.e., piped water systems and sewage networks) across African regions by combining Afrobarometer survey data with large-scale satellite imagery (Landsat&nbsp;8 and Sentinel-2). Through a self-supervised vision transformer approach (DINO), the model inferred the presence of critical water infrastructure based on subtle spectral and spatial cues in cloud-free monthly composites. By integrating ~46,000+ interview responses from Round&nbsp;7 and Round&nbsp;8 of Afrobarometer, the pipeline achieved high classification accuracies (over 96% for piped water access, 97% for sewage system access).
           </p>
           <p>
-            This methodology can operate even in data-sparse conditions, using unlabeled satellite imagery
-            to learn robust feature representations. It provides a scalable and cost-effective means to
-            identify infrastructure coverage gaps, offering vital screening tools for policymakers
-            aiming to meet SDG&nbsp;6 (clean water &amp; sanitation).
+            This methodology can operate even in data-sparse conditions, using unlabeled satellite imagery to learn robust feature representations. It provides a scalable and cost-effective means to identify infrastructure coverage gaps, offering vital screening tools for policymakers aiming to meet SDG&nbsp;6 (clean water &amp; sanitation).
           </p>
-          <p>
-            Please see
-            <a href="https://arxiv.org/abs/2411.19093" target="_blank" rel="noopener noreferrer">this manuscript</a>
-            and
-            <a href="https://sites.duke.edu/sagdku/people/" target="_blank" rel="noopener noreferrer">this project group link</a>
-            for more information.
-          </p>
+          <ul class="link-list">
+            <li><a href="https://arxiv.org/abs/2411.19093" target="_blank" rel="noopener noreferrer">Manuscript</a></li>
+            <li><a href="https://sites.duke.edu/sagdku/people/" target="_blank" rel="noopener noreferrer">Project Group Link</a></li>
+          </ul>
         </article>
 
-        <!-- Project 3: SWISLR – Saltwater Intrusion & Sea Level Rise in Rural Landscapes -->
+        <!-- Project 3 -->
         <article class="project-card">
-          <img
-            class="project-image"
-            src="assets/swislr.png"
-            alt="SWISLR Threat Visualization"
-          />
+          <img class="project-image" src="assets/swislr.png" alt="SWISLR Threat Visualization" />
           <h3>SWISLR – Saltwater Intrusion &amp; Sea Level Rise in Rural Landscapes</h3>
           <p>
-            This project addresses the growing threat of saltwater intrusion in the U.S. coastal plain,
-            where sea-level rise, storms, and altered drainage networks drive salinity far inland. Our
-            study synthesizes ecological, geospatial, and socioeconomic data to track how saline
-            inundation reshapes farmland, timberlands, and freshwater wetlands. We documented major
-            environmental repercussions—forest dieback, lost crop yields, and diminishing drinking
-            water resources—as well as impacts on rural communities historically reliant on these
-            coastal landscapes.
+            This project addresses the growing threat of saltwater intrusion in the U.S. coastal plain, where sea-level rise, storms, and altered drainage networks drive salinity far inland. Our study synthesizes ecological, geospatial, and socioeconomic data to track how saline inundation reshapes farmland, timberlands, and freshwater wetlands. We documented major environmental repercussions—forest dieback, lost crop yields, and diminishing drinking water resources—as well as impacts on rural communities historically reliant on these coastal landscapes.
           </p>
           <p>
-            By linking large geospatial datasets (e.g., ArcGIS-based hazard maps) with field surveys and
-            NSF-funded (DISES) research, we highlight hot spots of risk and identify local adaptation
-            strategies, such as selective drainage management or transitions to salt-tolerant crops.
-            Ultimately, the SWISLR project underscores the urgency of integrated planning to preserve
-            coastal livelihoods and ecosystems.
+            By linking large geospatial datasets (e.g., ArcGIS-based hazard maps) with field surveys and NSF-funded (DISES) research, we highlight hot spots of risk and identify local adaptation strategies, such as selective drainage management or transitions to salt-tolerant crops. Ultimately, the SWISLR project underscores the urgency of integrated planning to preserve coastal livelihoods and ecosystems.
           </p>
-          <p>
-            You can read more about it via
-            <a href="https://www.nsf.gov/awardsearch/showAward?AWD_ID=2108286" target="_blank" rel="noopener noreferrer">this NSF award</a>,
-            <a href="https://www.arcgis.com/apps/mapviewer/index.html?webmap=45e84df5598b488f97e5714c03458b97" target="_blank" rel="noopener noreferrer">this ArcGIS map</a>,
-            and
-            <a href="https://dukeuniv.maps.arcgis.com/apps/mapviewer/index.html?webmap=46722778e4cb468bb9d2431784d8d204" target="_blank" rel="noopener noreferrer">a second map</a>.
-            See also
-            <a href="https://www.researchgate.net/publication/377395034_Saltwater_Intrusion_and_Sea_Level_Rise_threatens_US_rural_coastal_landscapes_and_communities" target="_blank" rel="noopener noreferrer">this publication</a>,
-            <a href="https://bigdata.duke.edu/projects/assessing-climate-change-risk-of-rural-coastal-plain-communities/" target="_blank" rel="noopener noreferrer">this Duke Big Data page</a>,
-            and
-            <a href="https://bigdata.duke.edu/wp-content/uploads/2023/01/Team-25-2023.pdf?x87779" target="_blank" rel="noopener noreferrer">this project poster</a>.
-          </p>
+          <ul class="link-list">
+            <li><a href="https://www.nsf.gov/awardsearch/showAward?AWD_ID=2108286" target="_blank" rel="noopener noreferrer">NSF Award</a></li>
+            <li><a href="https://www.arcgis.com/apps/mapviewer/index.html?webmap=45e84df5598b488f97e5714c03458b97" target="_blank" rel="noopener noreferrer">ArcGIS Map</a></li>
+            <li><a href="https://dukeuniv.maps.arcgis.com/apps/mapviewer/index.html?webmap=46722778e4cb468bb9d2431784d8d204" target="_blank" rel="noopener noreferrer">Second Map</a></li>
+            <li><a href="https://www.researchgate.net/publication/377395034_Saltwater_Intrusion_and_Sea_Level_Rise_threatens_US_rural_coastal_landscapes_and_communities" target="_blank" rel="noopener noreferrer">Publication</a></li>
+            <li><a href="https://bigdata.duke.edu/projects/assessing-climate-change-risk-of-rural-coastal-plain-communities/" target="_blank" rel="noopener noreferrer">Duke Big Data Page</a></li>
+            <li><a href="https://bigdata.duke.edu/wp-content/uploads/2023/01/Team-25-2023.pdf?x87779" target="_blank" rel="noopener noreferrer">Project Poster</a></li>
+          </ul>
         </article>
 
       </div>
     </section>
 
-    <!-- OTHER PROJECTS SECTION -->
-    <section id="other-projects" style="margin-bottom: 2rem;">
-      <h2 style="margin-bottom: 1rem;">Other Projects</h2>
-      <div class="projects-grid">
-        <!-- Sound Waves -->
-        <article class="project-card">
-          <h3>Sound Waves in Kunshan: A Study of Filipino Bands</h3>
-          <p>
-            Conducted fieldwork and interviews to explore Filipino bands’ social and cultural experiences
-            in Kunshan, China, documenting their influence on the local music scene. The final deliverables
-            included a documentary film and a book titled <em>Sound Waves in Kunshan: The Lives of Filipino Musicians</em>.
-          </p>
-        </article>
+  <!-- OTHER PROJECTS SECTION -->
+  <section id="other-projects" style="margin-bottom: 2rem;">
+    <h2 style="margin-bottom: 1rem;">Other Projects</h2>
+    <div class="projects-grid">
+      <!-- Sound Waves -->
+      <article class="project-card">
+        <h3>Sound Waves in Kunshan: A Study of Filipino Bands</h3>
+        <p>
+          Conducted fieldwork and interviews to explore Filipino bands’ social and cultural experiences
+          in Kunshan, China, documenting their influence on the local music scene. The final deliverables
+          included a documentary film and a book titled <em>Sound Waves in Kunshan: The Lives of Filipino Musicians</em>.
+        </p>
+      </article>
 
-        <!-- Gamifying Risk Identification -->
-        <article class="project-card">
-          <h3>Gamifying Risk Identification for Alcohol Use Behaviors</h3>
-          <p>
-            Developed Unity-based games (AUBPT) deployed via WebGL, collaborating with research teams
-            in Tanzania and Brazil. Presented at the 2023 Fortin Foundation Bass Connections Virtual Showcase.
-          </p>
-          <p>
-            Learn more about the project in
-            <a href="https://bassconnections.duke.edu/app-assess-alcohol-use/" target="_blank" rel="noopener noreferrer">this Bass Connections link</a>.
-          </p>
-        </article>
+      <!-- Gamifying Risk Identification -->
+      <article class="project-card">
+        <h3>Gamifying Risk Identification for Alcohol Use Behaviors</h3>
+        <p>
+          Developed Unity-based games (AUBPT) deployed via WebGL, collaborating with research teams
+          in Tanzania and Brazil. Presented at the 2023 Fortin Foundation Bass Connections Virtual Showcase.
+        </p>
+        <p>
+          Learn more about the project in
+          <a href="https://bassconnections.duke.edu/app-assess-alcohol-use/" target="_blank" rel="noopener noreferrer">this Bass Connections link</a>.
+        </p>
+      </article>
 
-        <!-- SciEcon CIC -->
-        <article class="project-card">
-          <h3>SciEcon CIC – Blockchain-based Decentralized Cloud Storage</h3>
-          <p>
-            Led “DecentraStor,” deploying smart contracts (Solidity) for data keepers and splitters in Truffle,
-            integrated with Metamask, IPFS, and Infura. The result was a white paper and article,
-            presented at a university symposium.
-          </p>
-          <p>
-            More details can be found in
-            <a href="https://medium.com/sciecon-research/a-blockchain-based-decentralized-cloud-storage-with-keeper-and-distributor-systems-6d0b27632ec2" target="_blank" rel="noopener noreferrer">this article</a>.
-          </p>
-        </article>
-      </div>
-    </section>
-  </main>
+      <!-- SciEcon CIC -->
+      <article class="project-card">
+        <h3>SciEcon CIC – Blockchain-based Decentralized Cloud Storage</h3>
+        <p>
+          Led “DecentraStor,” deploying smart contracts (Solidity) for data keepers and splitters in Truffle,
+          integrated with Metamask, IPFS, and Infura. The result was a white paper and article,
+          presented at a university symposium.
+        </p>
+        <p>
+          More details can be found in
+          <a href="https://medium.com/sciecon-research/a-blockchain-based-decentralized-cloud-storage-with-keeper-and-distributor-systems-6d0b27632ec2" target="_blank" rel="noopener noreferrer">this article</a>.
+        </p>
+      </article>
+    </div>
+  </section>
+</main>
+
 
   <footer>
     <p>
@@ -311,7 +295,6 @@
   </footer>
 
   <script>
-    // Simple footer year script
     document.getElementById("year").textContent = new Date().getFullYear();
   </script>
 </body>
