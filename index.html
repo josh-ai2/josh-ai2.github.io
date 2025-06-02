@@ -135,11 +135,11 @@
 <body>
 
 <!--&lt;!&ndash; HEADER WITH PROFILE PHOTO &ndash;&gt;-->
-<!--  <header>-->
-<!--    <img src="assets/josh.jpg" alt="Profile Photo of Josh">-->
-<!--    <div>-->
-<!--      <h1>About Josh Manto</h1>-->
-<!--          <p style="font-size: 1.1rem;">-->
+<!--<header style="display: flex; align-items: flex-start; gap: 1.5rem; padding: 1rem;">-->
+<!--  <img src="assets/josh.jpg" alt="Profile Photo of Josh" style="width: 160px; height: auto; border-radius: 8px;">-->
+<!--  <div>-->
+<!--    <h1>About Josh Manto</h1>-->
+<!--    <p style="font-size: 1.1rem;">-->
 <!--          Hi, I'm <strong>Josh&nbsp;Manto</strong>, a recent graduate of the Duke University and Duke Kunshan University dual-degree program-->
 <!--          specializing in machine learning, remote sensing, and geospatial data science. I'm currently seeking-->
 <!--          opportunities in GIS and geospatial analysis, where I can apply my skills in satellite imagery processing,-->
@@ -147,37 +147,50 @@
 <!--          <a href="https://www.sciencedirect.com/journal/water-research" target="_blank" rel="noopener noreferrer">Water Research</a>-->
 <!--          on water infrastructure mapping, and another in-->
 <!--          <a href="https://www.sciencedirect.com/journal/remote-sensing-of-environment" target="_blank" rel="noopener noreferrer">Remote Sensing of Environment</a>-->
-<!--          focusing on time-series classification of forest ecosystems. Feel free to reach out at-->
-<!--          <a href="mailto:jmm267@duke.edu">jmm267@duke.edu</a>-->
-<!--          or connect on-->
-<!--          <a href="https://www.linkedin.com/in/josh-manto/" target="_blank" rel="noopener noreferrer">LinkedIn</a>.-->
+<!--          focusing on time-series classification of forest ecosystems.-->
 <!--        </p>-->
-<!--    </div>-->
-<!--  </header>-->
 
-<!-- HEADER WITH PROFILE PHOTO -->
-<header style="display: flex; align-items: flex-start; gap: 1.5rem; padding: 1rem;">
-  <img src="assets/josh.jpg" alt="Profile Photo of Josh" style="width: 160px; height: auto; border-radius: 8px;">
-  <div>
-    <h1>About Josh Manto</h1>
-    <p style="font-size: 1.1rem;">
-          Hi, I'm <strong>Josh&nbsp;Manto</strong>, a recent graduate of the Duke University and Duke Kunshan University dual-degree program
-          specializing in machine learning, remote sensing, and geospatial data science. I'm currently seeking
-          opportunities in GIS and geospatial analysis, where I can apply my skills in satellite imagery processing,
-          deep learning, and environmental modeling. I have two forthcoming publications: one in
-          <a href="https://www.sciencedirect.com/journal/water-research" target="_blank" rel="noopener noreferrer">Water Research</a>
-          on water infrastructure mapping, and another in
-          <a href="https://www.sciencedirect.com/journal/remote-sensing-of-environment" target="_blank" rel="noopener noreferrer">Remote Sensing of Environment</a>
-          focusing on time-series classification of forest ecosystems.
-        </p>
+<!--    <p style="font-size: 1.1rem;">-->
+<!--      📍 Manila, Philippines <br>-->
+<!--      📧 <a href="mailto:jmm267@duke.edu">jmm267@duke.edu</a> <br>-->
+<!--      💼 <a href="https://www.linkedin.com/in/josh-manto/" target="_blank" rel="noopener noreferrer">LinkedIn</a>-->
+<!--    </p>-->
+<!--  </div>-->
+<!--</header>-->
 
-    <p style="font-size: 1.1rem;">
-      📍 Manila, Philippines <br>
-      📧 <a href="mailto:jmm267@duke.edu">jmm267@duke.edu</a> <br>
-      💼 <a href="https://www.linkedin.com/in/josh-manto/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
-    </p>
+<!-- HEADER WITH PROFILE PHOTO AND CLUSTRMAPS -->
+<header style="display: flex; justify-content: space-between; align-items: flex-start; gap: 2rem; padding: 1rem; flex-wrap: wrap;">
+  <!-- Left: Profile Photo and Text -->
+  <div style="display: flex; gap: 1.5rem; flex: 1 1 600px; max-width: 800px;">
+    <img src="assets/josh.jpg" alt="Profile Photo of Josh" style="width: 300px; height: auto; border-radius: 8px;">
+    <div>
+      <h1>About Josh Manto</h1>
+      <p style="font-size: 1.05rem; margin-bottom: 0.75rem;">
+        Hi, I'm <strong>Josh&nbsp;Manto</strong>, a recent graduate of the Duke University and Duke Kunshan University dual-degree program
+        specializing in machine learning, remote sensing, and geospatial data science. I'm currently seeking
+        opportunities in GIS and geospatial analysis, where I can apply my skills in satellite imagery processing,
+        deep learning, and environmental modeling. I have two forthcoming publications: one in
+        <a href="https://www.sciencedirect.com/journal/water-research" target="_blank" rel="noopener noreferrer">Water Research</a>
+        on water infrastructure mapping, and another in
+        <a href="https://www.sciencedirect.com/journal/remote-sensing-of-environment" target="_blank" rel="noopener noreferrer">Remote Sensing of Environment</a>
+        focusing on time-series classification of forest ecosystems.
+      </p>
+
+      <p style="font-size: 1.05rem; margin-bottom: 0.5rem;">
+        📍 Manila, Philippines <br>
+        📧 <a href="mailto:jmm267@duke.edu">jmm267@duke.edu</a> <br>
+        💼 <a href="https://www.linkedin.com/in/josh-manto/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+      </p>
+    </div>
+  </div>
+
+  <!-- Right: ClustrMaps -->
+  <div style="flex: 0 0 300px; max-width: 300px;">
+    <h3 style="margin-bottom: 0.5rem;">🌍 Visitors</h3>
+    <script type="text/javascript" id="clustrmaps" src="//clustrmaps.com/map_v2.js?d=kiikLjFvLVvIzGbef0FnNQ48TQJS3LSi5PvTkpRhkOU&cl=ffffff&w=a"></script>
   </div>
 </header>
+
 
 
   <main>
