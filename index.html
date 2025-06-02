@@ -134,30 +134,6 @@
 </head>
 <body>
 
-<!--&lt;!&ndash; HEADER WITH PROFILE PHOTO &ndash;&gt;-->
-<!--<header style="display: flex; align-items: flex-start; gap: 1.5rem; padding: 1rem;">-->
-<!--  <img src="assets/josh.jpg" alt="Profile Photo of Josh" style="width: 160px; height: auto; border-radius: 8px;">-->
-<!--  <div>-->
-<!--    <h1>About Josh Manto</h1>-->
-<!--    <p style="font-size: 1.1rem;">-->
-<!--          Hi, I'm <strong>Josh&nbsp;Manto</strong>, a recent graduate of the Duke University and Duke Kunshan University dual-degree program-->
-<!--          specializing in machine learning, remote sensing, and geospatial data science. I'm currently seeking-->
-<!--          opportunities in GIS and geospatial analysis, where I can apply my skills in satellite imagery processing,-->
-<!--          deep learning, and environmental modeling. I have two forthcoming publications: one in-->
-<!--          <a href="https://www.sciencedirect.com/journal/water-research" target="_blank" rel="noopener noreferrer">Water Research</a>-->
-<!--          on water infrastructure mapping, and another in-->
-<!--          <a href="https://www.sciencedirect.com/journal/remote-sensing-of-environment" target="_blank" rel="noopener noreferrer">Remote Sensing of Environment</a>-->
-<!--          focusing on time-series classification of forest ecosystems.-->
-<!--        </p>-->
-
-<!--    <p style="font-size: 1.1rem;">-->
-<!--      📍 Manila, Philippines <br>-->
-<!--      📧 <a href="mailto:jmm267@duke.edu">jmm267@duke.edu</a> <br>-->
-<!--      💼 <a href="https://www.linkedin.com/in/josh-manto/" target="_blank" rel="noopener noreferrer">LinkedIn</a>-->
-<!--    </p>-->
-<!--  </div>-->
-<!--</header>-->
-
 <!-- HEADER WITH PROFILE PHOTO AND CLUSTRMAPS -->
 <header style="display: flex; justify-content: space-between; align-items: flex-start; gap: 2rem; padding: 1rem; flex-wrap: wrap;">
   <!-- Left: Profile Photo and Text -->
@@ -185,14 +161,13 @@
   </div>
 
   <!-- Right: ClustrMaps -->
-  <div style="flex: 0 0 300px; max-width: 500px;">
+  <div style="flex: 0 0 500px; text-align: center; max-width: 500px;margin: 0 auto;">
     <h3 style="margin-bottom: 0.5rem;">🌍 Visitors</h3>
     <script type="text/javascript" id="clstr_globe" src="//clustrmaps.com/globe.js?d=kiikLjFvLVvIzGbef0FnNQ48TQJS3LSi5PvTkpRhkOU"></script>
   </div>
 </header>
 
-
-  <main>
+ <main>
     <section id="main-projects" style="margin-bottom: 2rem;">
       <h2 style="margin-bottom: 1rem;">My Main Projects</h2>
       <div class="projects-grid">
@@ -252,6 +227,38 @@
       </div>
     </section>
 
+
+<!-- SNIPPETS SECTION -->
+<section id="snippets" style="margin-bottom: 2rem;">
+  <h2 style="margin-bottom: 1rem;">Snippets of My Workflow</h2>
+
+  <!-- Boxed Container Matching Project Sections -->
+  <div class="project-box" style="padding: 1rem; background: #f9f9f9; border-radius: 12px; box-shadow: 0 2px 10px rgba(0,0,0,0.05);">
+
+    <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 1rem; align-items: flex-start;">
+
+      <!-- Main Display Image -->
+      <div style="flex: 1 1 800px; max-width: 800px;">
+        <img id="main-collage-img" src="assets/collage/collage_1.png" alt="Zoomed Image"
+             style="width: 100%; border-radius: 12px; cursor: pointer; transition: transform 0.3s;">
+      </div>
+
+      <!-- Thumbnails Column -->
+      <div style="display: flex; flex-direction: column; gap: 0.5rem; max-height: 600px; overflow-y: auto;">
+        <img class="thumb" src="assets/collage/collage_1.png" data-index="0" style="width: 100px; border-radius: 8px; cursor: pointer;">
+        <img class="thumb" src="assets/collage/collage_2.png" data-index="1" style="width: 100px; border-radius: 8px; cursor: pointer;">
+        <img class="thumb" src="assets/collage/collage_3.png" data-index="2" style="width: 100px; border-radius: 8px; cursor: pointer;">
+        <img class="thumb" src="assets/collage/collage_4.png" data-index="3" style="width: 100px; border-radius: 8px; cursor: pointer;">
+        <img class="thumb" src="assets/collage/collage_5.png" data-index="4" style="width: 100px; border-radius: 8px; cursor: pointer;">
+        <img class="thumb" src="assets/collage/collage_6.png" data-index="5" style="width: 100px; border-radius: 8px; cursor: pointer;">
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+
   <!-- OTHER PROJECTS SECTION -->
   <section id="other-projects" style="margin-bottom: 2rem;">
     <h2 style="margin-bottom: 1rem;">Other Projects</h2>
@@ -306,5 +313,48 @@
   <script>
     document.getElementById("year").textContent = new Date().getFullYear();
   </script>
+
+<script>
+  const images = [
+    "assets/collage/collage_1.png",
+    "assets/collage/collage_2.png",
+    "assets/collage/collage_3.png",
+    "assets/collage/collage_4.png",
+    "assets/collage/collage_5.png",
+    "assets/collage/collage_6.png"
+  ];
+
+  let current = 0;
+  const mainImg = document.getElementById("main-collage-img");
+  const thumbs = document.querySelectorAll(".thumb");
+
+  // Auto-switch image every 5 seconds
+  setInterval(() => {
+    current = (current + 1) % images.length;
+    mainImg.src = images[current];
+  }, 5000);
+
+  // Clicking a thumbnail
+  thumbs.forEach(thumb => {
+    thumb.addEventListener("click", () => {
+      const index = parseInt(thumb.dataset.index);
+      current = index;
+      mainImg.src = images[current];
+    });
+  });
+
+  // Fullscreen on click
+  mainImg.addEventListener("click", () => {
+    if (mainImg.requestFullscreen) {
+      mainImg.requestFullscreen();
+    } else if (mainImg.webkitRequestFullscreen) {
+      mainImg.webkitRequestFullscreen();
+    } else if (mainImg.msRequestFullscreen) {
+      mainImg.msRequestFullscreen();
+    }
+  });
+</script>
+
+
 </body>
 </html>
