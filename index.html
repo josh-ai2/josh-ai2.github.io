@@ -6,7 +6,6 @@
   <title>Josh Manto – Personal Website</title>
   <link rel="stylesheet" href="css/styles.css" />
   <link rel="stylesheet" href="css/main.css" />
-
   <style>
     * {
       box-sizing: border-box;
@@ -21,12 +20,10 @@
     line-height: 1.4;
     background-image: none;
   }
-
     img {
       max-width: 100%;
       height: auto;
     }
-
     header {
       padding: 1rem;
       border-bottom: 1px solid #ccc;
@@ -45,20 +42,17 @@
       margin-bottom: 0.3rem;
       font-size: 1.6rem;
     }
-
     main {
       max-width: 1000px;
       margin: 1rem auto;
       padding: 0 1rem;
     }
-
     #about {
       margin-bottom: 2rem;
     }
     #about h2 {
       margin-bottom: 0.5rem;
     }
-
     .projects-grid {
       display: flex;
       flex-wrap: wrap;
@@ -73,8 +67,9 @@
       padding: 1.5rem;
       margin: 1rem 0;
       min-width: 280px;
+      position: relative;
+      overflow: hidden;
     }
-
     .project-card h3 {
       margin-top: 0;
       margin-bottom: 0.5rem;
@@ -82,7 +77,6 @@
     .project-card p {
       margin-bottom: 0.6rem;
     }
-
     .project-image {
       width: 100%;
       max-width: 400px;
@@ -90,8 +84,11 @@
       object-fit: cover;
       display: block;
       margin-bottom: 0.8rem;
+      transition: transform 0.5s ease-in-out;
     }
-
+    .project-card:hover .project-image {
+      transform: scale(1.1);
+    }
     @media (max-width: 900px) {
       .project-card {
         flex: 1 1 calc(50% - 1rem);
@@ -106,7 +103,6 @@
         height: auto;
       }
     }
-
     footer {
       padding: 1rem;
       text-align: center;
@@ -114,7 +110,6 @@
       font-size: 0.9rem;
       margin-top: 2rem;
     }
-
     .link-list {
       list-style: none;
       padding-left: 0;
@@ -130,10 +125,45 @@
     .link-list a:hover {
       text-decoration: underline;
     }
+    .slideshow-container {
+      position: relative;
+      max-width: 800px;
+      margin: auto;
+    }
+    .slideshow-container img {
+      width: 100%;
+      border-radius: 12px;
+    }
+    .thumbnail-container {
+      display: flex;
+      justify-content: center;
+      gap: 0.5rem;
+      margin-top: 1rem;
+      overflow-x: auto;
+      scrollbar-width: none;
+    }
+    .thumbnail-container::-webkit-scrollbar {
+      display: none;
+    }
+    .thumbnail-container img {
+      width: 60px;
+      height: 60px;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: transform 0.2s;
+    }
+    .thumbnail-container img:hover {
+      transform: scale(1.1);
+    }
+    @media (max-width: 600px) {
+      .thumbnail-container img {
+        width: 50px;
+        height: 50px;
+      }
+    }
   </style>
 </head>
 <body>
-
 <!-- HEADER WITH PROFILE PHOTO AND CLUSTRMAPS -->
 <header style="display: flex; justify-content: space-between; align-items: flex-start; gap: 2rem; padding: 1rem; flex-wrap: nowrap;">
   <!-- Left: Profile Photo and Text -->
@@ -151,7 +181,6 @@
         <a href="https://www.sciencedirect.com/journal/remote-sensing-of-environment" target="_blank" rel="noopener noreferrer">Remote Sensing of Environment</a>
         focusing on time-series classification of forest ecosystems.
       </p>
-
       <p style="font-size: 1.05rem; margin-bottom: 0.5rem;">
         📍 Manila, Philippines <br>
         🎓 <a href="https://www.parchment.com/u/award/5cf107128ec9c1dd787c6e41f8256a9d" target="_blank" rel="noopener noreferrer">Diploma from Duke</a> <br>
@@ -160,19 +189,11 @@
       </p>
     </div>
   </div>
-
-  <!-- Right: ClustrMaps -->
-  <div style="flex: 0 0 400px; text-align: center; margin-left: auto;">
-    <h3 style="margin-bottom: 0.5rem;">🌍 Visitors</h3>
-    <script type="text/javascript" id="clstr_globe" src="//clustrmaps.com/globe.js?d=kiikLjFvLVvIzGbef0FnNQ48TQJS3LSi5PvTkpRhkOU"></script>
-  </div>
 </header>
-
  <main>
     <section id="main-projects" style="margin-bottom: 2rem;">
       <h2 style="margin-bottom: 1rem;">My Main Projects</h2>
       <div class="projects-grid">
-
         <!-- Project 1 -->
         <article class="project-card">
           <img class="project-image" src="assets/lstm.png" alt="Dual LSTM Pipelines Visualization" />
@@ -188,7 +209,6 @@
             <li><a href="assets/sw-poster.png" target="_blank" rel="noopener noreferrer">Poster</a></li>
           </ul>
         </article>
-
         <!-- Project 2 -->
         <article class="project-card">
           <img class="project-image" src="assets/piped-water.png" alt="SDG 6 - Piped Water Access Map" />
@@ -204,7 +224,6 @@
             <li><a href="https://sites.duke.edu/sagdku/people/" target="_blank" rel="noopener noreferrer">Project Group Link</a></li>
           </ul>
         </article>
-
         <!-- Project 3 -->
         <article class="project-card">
           <img class="project-image" src="assets/swislr.png" alt="SWISLR Threat Visualization" />
@@ -224,42 +243,26 @@
             <li><a href="https://bigdata.duke.edu/wp-content/uploads/2023/01/Team-25-2023.pdf?x87779" target="_blank" rel="noopener noreferrer">Project Poster</a></li>
           </ul>
         </article>
-
       </div>
     </section>
-
-
 <!-- SNIPPETS SECTION -->
 <section id="snippets" style="margin-bottom: 2rem;">
   <h2 style="margin-bottom: 1rem;">Snippets of My Workflow</h2>
-
-  <!-- Boxed Container Matching Project Sections -->
-  <div class="project-box" style="padding: 1rem; background: #f9f9f9; border-radius: 12px; box-shadow: 0 2px 10px rgba(0,0,0,0.05);">
-
-    <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 1rem; align-items: flex-start;">
-
-      <!-- Main Display Image -->
-      <div style="flex: 1 1 800px; max-width: 800px;">
-        <img id="main-collage-img" src="assets/collage/collage_1.png" alt="Zoomed Image"
-             style="width: 100%; border-radius: 12px; cursor: pointer; transition: transform 0.3s;">
-      </div>
-
-      <!-- Thumbnails Column -->
-      <div style="display: flex; flex-direction: column; gap: 0.5rem; max-height: 600px; overflow-y: auto;">
-        <img class="thumb" src="assets/collage/collage_1.png" data-index="0" style="width: 100px; border-radius: 8px; cursor: pointer;">
-        <img class="thumb" src="assets/collage/collage_2.png" data-index="1" style="width: 100px; border-radius: 8px; cursor: pointer;">
-        <img class="thumb" src="assets/collage/collage_3.png" data-index="2" style="width: 100px; border-radius: 8px; cursor: pointer;">
-        <img class="thumb" src="assets/collage/collage_4.png" data-index="3" style="width: 100px; border-radius: 8px; cursor: pointer;">
-        <img class="thumb" src="assets/collage/collage_5.png" data-index="4" style="width: 100px; border-radius: 8px; cursor: pointer;">
-        <img class="thumb" src="assets/collage/collage_6.png" data-index="5" style="width: 100px; border-radius: 8px; cursor: pointer;">
-      </div>
-
+  <article class="project-card">
+    <div class="slideshow-container" style="position: relative; max-width: 800px; margin: auto; overflow: hidden; border-radius: 12px;">
+      <img id="main-collage-img" src="assets/collage/collage_1.png" alt="Workflow Snippet Image"
+           style="width: 100%; height: auto; display: block; transition: transform 0.5s ease-in-out;" />
     </div>
-  </div>
+    <div class="thumbnail-container" style="display: flex; justify-content: center; gap: 0.5rem; margin-top: 1rem; overflow-x: auto; scrollbar-width: none;">
+      <img class="thumb" src="assets/collage/collage_1.png" data-index="0" style="width: 60px; height: 33px; object-fit: cover; border-radius: 8px; cursor: pointer; transition: transform 0.2s;" />
+      <img class="thumb" src="assets/collage/collage_2.png" data-index="1" style="width: 60px; height: 34px; object-fit: cover; border-radius: 8px; cursor: pointer; transition: transform 0.2s;" />
+      <img class="thumb" src="assets/collage/collage_3.png" data-index="2" style="width: 60px; height: 33px; object-fit: cover; border-radius: 8px; cursor: pointer; transition: transform 0.2s;" />
+      <img class="thumb" src="assets/collage/collage_4.png" data-index="3" style="width: 60px; height: 34px; object-fit: cover; border-radius: 8px; cursor: pointer; transition: transform 0.2s;" />
+      <img class="thumb" src="assets/collage/collage_5.png" data-index="4" style="width: 60px; height: 33px; object-fit: cover; border-radius: 8px; cursor: pointer; transition: transform 0.2s;" />
+      <img class="thumb" src="assets/collage/collage_6.png" data-index="5" style="width: 60px; height: 34px; object-fit: cover; border-radius: 8px; cursor: pointer; transition: transform 0.2s;" />
+    </div>
+  </article>
 </section>
-
-
-
   <!-- OTHER PROJECTS SECTION -->
   <section id="other-projects" style="margin-bottom: 2rem;">
     <h2 style="margin-bottom: 1rem;">Other Projects</h2>
@@ -273,7 +276,6 @@
           included a documentary film and a book titled <em>Sound Waves in Kunshan: The Lives of Filipino Musicians</em>.
         </p>
       </article>
-
       <!-- Gamifying Risk Identification -->
       <article class="project-card">
         <h3>Gamifying Risk Identification for Alcohol Use Behaviors</h3>
@@ -286,7 +288,6 @@
           <a href="https://bassconnections.duke.edu/app-assess-alcohol-use/" target="_blank" rel="noopener noreferrer">this Bass Connections link</a>.
         </p>
       </article>
-
       <!-- SciEcon CIC -->
       <article class="project-card">
         <h3>SciEcon CIC – Blockchain-based Decentralized Cloud Storage</h3>
@@ -302,60 +303,87 @@
       </article>
     </div>
   </section>
+
+  <!-- ClustrMaps and Referrals Section -->
+  <section id="referrals" style="margin-bottom: 2rem;">
+    <h2 style="margin-bottom: 1rem;">Referrals and Visitors</h2>
+    <div class="projects-grid">
+      <article class="project-card" style="flex: 1 1 calc(50% - 1rem); max-width: 50%;">
+        <h3>🌍 Visitors</h3>
+        <script type="text/javascript" id="clstr_globe" src="//clustrmaps.com/globe.js?d=kiikLjFvLVvIzGbef0FnNQ48TQJS3LSi5PvTkpRhkOU"></script>
+      </article>
+      <article class="project-card" style="flex: 1 1 calc(50% - 1rem); max-width: 50%;">
+        <h3>Referrals for Projects</h3>
+        <ul class="link-list">
+          <li><a href="https://faculty.dukekunshan.edu.cn/faculty_profiles/andrew-field" target="_blank" rel="noopener noreferrer">Professor Andrew Field</a></li>
+          <li><a href="https://faculty.dukekunshan.edu.cn/faculty_profiles/binbin-li" target="_blank" rel="noopener noreferrer">Professor Binbin Li</a></li>
+          <li><a href="https://faculty.dukekunshan.edu.cn/faculty_profiles/ka-leung-lam" target="_blank" rel="noopener noreferrer">Professor Ka Leung Lam</a></li>
+          <li><a href="https://nicholas.duke.edu/people/faculty/bernhardt" target="_blank" rel="noopener noreferrer">Professor Emily Bernhardt</a></li>
+          <li><a href="https://faculty.dukekunshan.edu.cn/faculty_profiles/ding-ma" target="_blank" rel="noopener noreferrer">Professor Ding Ma</a></li>
+        </ul>
+      </article>
+    </div>
+  </section>
 </main>
-
-
   <footer>
     <p>
       &copy; <span id="year"></span> <strong style="white-space: nowrap;">Josh&nbsp;Manto</strong>. All rights reserved.
     </p>
   </footer>
-
   <script>
     document.getElementById("year").textContent = new Date().getFullYear();
   </script>
-
 <script>
   const images = [
-    "assets/collage/collage_1.png",
-    "assets/collage/collage_2.png",
-    "assets/collage/collage_3.png",
-    "assets/collage/collage_4.png",
-    "assets/collage/collage_5.png",
-    "assets/collage/collage_6.png"
-  ];
-
-  let current = 0;
-  const mainImg = document.getElementById("main-collage-img");
-  const thumbs = document.querySelectorAll(".thumb");
-
-  // Auto-switch image every 5 seconds
-  setInterval(() => {
-    current = (current + 1) % images.length;
+  "assets/collage/collage_1.png",
+  "assets/collage/collage_2.png",
+  "assets/collage/collage_3.png",
+  "assets/collage/collage_4.png",
+  "assets/collage/collage_5.png",
+  "assets/collage/collage_6.png"
+];
+let current = 0;
+const mainImg = document.getElementById("main-collage-img");
+const thumbs = document.querySelectorAll(".thumb");
+// Function to slide image with animation
+function slideImage(index) {
+  const nextIndex = (index + 1) % images.length;
+  const nextImg = new Image();
+  nextImg.src = images[nextIndex];
+  nextImg.onload = () => {
+    mainImg.style.transition = "transform 0.5s ease-in-out";
+    mainImg.style.transform = "translateX(-100%)";
+    setTimeout(() => {
+      mainImg.src = images[nextIndex];
+      mainImg.style.transition = "none";
+      mainImg.style.transform = "translateX(0)";
+    }, 500);
+  };
+}
+// Auto-switch image every 5 seconds
+setInterval(() => {
+  slideImage(current);
+  current = (current + 1) % images.length;
+}, 5000);
+// Clicking a thumbnail
+thumbs.forEach(thumb => {
+  thumb.addEventListener("click", () => {
+    const index = parseInt(thumb.dataset.index);
+    current = index;
     mainImg.src = images[current];
-  }, 5000);
-
-  // Clicking a thumbnail
-  thumbs.forEach(thumb => {
-    thumb.addEventListener("click", () => {
-      const index = parseInt(thumb.dataset.index);
-      current = index;
-      mainImg.src = images[current];
-    });
   });
-
-  // Fullscreen on click
-  mainImg.addEventListener("click", () => {
-    if (mainImg.requestFullscreen) {
-      mainImg.requestFullscreen();
-    } else if (mainImg.webkitRequestFullscreen) {
-      mainImg.webkitRequestFullscreen();
-    } else if (mainImg.msRequestFullscreen) {
-      mainImg.msRequestFullscreen();
-    }
-  });
+});
+// Fullscreen on click
+mainImg.addEventListener("click", () => {
+  if (mainImg.requestFullscreen) {
+    mainImg.requestFullscreen();
+  } else if (mainImg.webkitRequestFullscreen) {
+    mainImg.webkitRequestFullscreen();
+  } else if (mainImg.msRequestFullscreen) {
+    mainImg.msRequestFullscreen();
+  }
+});
 </script>
-
-
 </body>
 </html>
+```
