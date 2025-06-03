@@ -135,11 +135,11 @@
 <body>
 
 <!-- HEADER WITH PROFILE PHOTO AND CLUSTRMAPS -->
-<header style="display: flex; justify-content: space-between; align-items: flex-start; gap: 2rem; padding: 1rem; flex-wrap: wrap;">
+<header style="display: flex; justify-content: space-between; align-items: flex-start; gap: 2rem; padding: 1rem; flex-wrap: nowrap;">
   <!-- Left: Profile Photo and Text -->
-  <div style="display: flex; gap: 1.5rem; flex: 1 1 600px; max-width: 800px;">
-    <img src="assets/josh.jpg" alt="Profile Photo of Josh" style="width: 300px; height: auto; border-radius: 8px;">
-    <div>
+  <div style="display: flex; gap: 1.5rem; flex: 1 1 60%; min-width: 0;">
+    <img src="assets/josh.jpg" alt="Profile Photo of Josh" style="width: 300px; height: auto; border-radius: 8px; flex-shrink: 0;">
+    <div style="min-width: 0;">
       <h1>About Josh Manto</h1>
       <p style="font-size: 1.05rem; margin-bottom: 0.75rem;">
         Hi, I'm <strong>Josh&nbsp;Manto</strong>, a recent graduate of the Duke University and Duke Kunshan University dual-degree program
@@ -154,6 +154,7 @@
 
       <p style="font-size: 1.05rem; margin-bottom: 0.5rem;">
         📍 Manila, Philippines <br>
+        🎓 <a href="https://www.parchment.com/u/award/5cf107128ec9c1dd787c6e41f8256a9d" target="_blank" rel="noopener noreferrer">Diploma from Duke</a> <br>
         📧 <a href="mailto:jmm267@duke.edu">jmm267@duke.edu</a> <br>
         💼 <a href="https://www.linkedin.com/in/josh-manto/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
       </p>
@@ -161,7 +162,7 @@
   </div>
 
   <!-- Right: ClustrMaps -->
-  <div style="flex: 0 0 400px; text-align: center; max-width: 400px;margin: 0 auto;">
+  <div style="flex: 0 0 400px; text-align: center; margin-left: auto;">
     <h3 style="margin-bottom: 0.5rem;">🌍 Visitors</h3>
     <script type="text/javascript" id="clstr_globe" src="//clustrmaps.com/globe.js?d=kiikLjFvLVvIzGbef0FnNQ48TQJS3LSi5PvTkpRhkOU"></script>
   </div>
