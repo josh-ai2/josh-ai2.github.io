@@ -250,6 +250,42 @@
         </article>
       </div>
     </section>
+
+
+  <!-- PROJECT SPOTLIGHT SECTION (Updated) -->
+<section id="project-spotlight" style="margin-bottom: 2rem;">
+  <h2 style="margin-bottom: 1rem;">Project Spotlight: Global Reservoir Monitoring</h2>
+  <article class="project-card">
+    <div style="display: flex; flex-wrap: wrap; gap: 2rem; align-items: flex-start;">
+
+      <!-- Left Column: Poster Image (Updated for Zoom) -->
+      <div style="flex: 1; min-width: 300px;">
+        <img id="spotlight-poster" src="assets/Reservoir_poster.png" alt="Poster for the Global Reservoir Monitoring Project" style="width: 100%; height: auto; border-radius: 8px; box-shadow: 0 4px 12px rgba(0,0,0,0.1); cursor: zoom-in;">
+      </div>
+
+      <!-- Right Column: Project Description and Links -->
+      <div style="flex: 2; min-width: 300px;">
+        <h3 style="margin-top: 0;">Automated Storage & Sedimentation Analysis</h3>
+        <p>
+          This project tackles the challenge of monitoring global water resources by building a fully automated pipeline to assess reservoir storage capacity and sedimentation. By integrating massive geospatial datasets (HydroLAKES, Global Dam Watch) with Sentinel-2 satellite imagery in Google Earth Engine, the system can process time-series data for over 25,000 reservoirs worldwide.
+        </p>
+        <p>
+          Using machine learning models (LSTM, XGBoost) in Python, the framework predicts monthly water storage, providing a scalable, low-cost solution for water management, especially in data-scarce and transboundary basins. The entire workflow is designed for reproducibility and large-scale deployment.
+        </p>
+        <ul class="link-list">
+          <li><a href="assets/Final_report_reservoir.pdf" target="_blank" rel="noopener noreferrer">View Final Report</a></li>
+          <li><a href="assets/Reservoir_process_documentation.pdf" target="_blank" rel="noopener noreferrer">View Process Documentation</a></li>
+        </ul>
+      </div>
+
+    </div>
+  </article>
+</section>
+
+
+
+
+
 <!-- SNIPPETS SECTION -->
 <section id="snippets" style="margin-bottom: 2rem;">
   <h2 style="margin-bottom: 1rem;">Snippets of My Workflow</h2>
@@ -389,6 +425,30 @@ mainImg.addEventListener("click", () => {
   }
 });
 </script>
+
+<!-- Image Zoom Modal -->
+<div id="image-modal" style="display: none; position: fixed; z-index: 1000; left: 0; top: 0; width: 100%; height: 100%; overflow: auto; background-color: rgba(0,0,0,0.85); justify-content: center; align-items: center; cursor: zoom-out;">
+  <img id="modal-image" src="" alt="Zoomed Project Poster" style="max-width: 90%; max-height: 90%; object-fit: contain;">
+
+  <script>
+  // Get the modal elements
+  const modal = document.getElementById('image-modal');
+  const modalImg = document.getElementById('modal-image');
+  const originalPoster = document.getElementById('spotlight-poster');
+
+  // When the user clicks the poster, open the modal
+  originalPoster.onclick = function(){
+    modal.style.display = "flex";
+    modalImg.src = this.src;
+  }
+
+  // When the user clicks on the modal (the dark background), close it
+  modal.onclick = function() {
+    modal.style.display = "none";
+  }
+</script>
+
+</div>
 </body>
 </html>
 ```
